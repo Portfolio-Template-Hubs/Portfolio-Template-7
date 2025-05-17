@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil's Portfolio | Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -52,7 +51,7 @@
     <header class="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden animate-gradient">
         <nav class="fixed top-0 left-0 right-0 z-50 glass-effect py-4 px-6 md:px-12">
             <div class="flex justify-between items-center">
-                <div class="text-2xl md:text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300">Nikhil<span class="text-pink-400">.</span></div>
+                <div class="text-2xl md:text-3xl font-bold text-white hover:text-pink-400 transition-colors duration-300 cursor-pointer">Nikhil<span class="text-pink-400">.</span></div>
                 <ul class="hidden md:flex space-x-8">
                     <li><a href="#about" class="text-white hover:text-pink-400 transition-colors duration-300 relative group">
                         About
@@ -83,24 +82,90 @@
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
                 </ul>
-                <div class="md:hidden menu-toggle cursor-pointer">
+                <button class="md:hidden menu-toggle cursor-pointer z-50 p-2 rounded-lg hover:bg-gray-700/50 transition-colors duration-300" aria-label="Toggle menu">
                     <div class="w-6 h-0.5 bg-white my-1.5 transition-all duration-300"></div>
                     <div class="w-6 h-0.5 bg-white my-1.5 transition-all duration-300"></div>
                     <div class="w-6 h-0.5 bg-white my-1.5 transition-all duration-300"></div>
+                </button>
+            </div>
+            <!-- Enhanced Mobile Menu -->
+            <div class="mobile-menu fixed inset-0 bg-gray-900/95 backdrop-blur-lg z-40 transform translate-x-full transition-all duration-500 ease-in-out">
+                <div class="absolute top-8 right-8 z-50">
+                    <button class="close-menu text-white hover:text-pink-400 transition-colors duration-300 p-2 rounded-lg hover:bg-gray-700/50" aria-label="Close menu">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div class="h-screen pt-24 bg-gray-900/95 pb-12 overflow-y-auto">
+                    <ul class="flex flex-col items-center space-y-8 text-xl">
+                        <li class="w-full text-center">
+                            <a href="#about" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                About
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#skills" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Skills
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#projects" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Projects
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#testimonials" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Testimonials
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#timeline" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Journey
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#blog" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Blog
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                        <li class="w-full text-center">
+                            <a href="#contact" class="block py-3 text-white hover:text-pink-400 transition-all duration-300 relative group">
+                                Contact
+                                <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-1/2 transform -translate-x-1/2"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social Links for Mobile -->
+                    <div class="flex justify-center space-x-6 mt-12">
+                        <a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full hover:bg-pink-500 transition-all duration-300 transform hover:scale-110" aria-label="GitHub">
+                            <i class="fab fa-github text-white text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full hover:bg-pink-500 transition-all duration-300 transform hover:scale-110" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full hover:bg-pink-500 transition-all duration-300 transform hover:scale-110" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
         <div class="hero-content text-center px-6 md:px-0 z-10" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-float">Hi, I'm <span class="text-pink-400 relative">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-float">Hi, I'm <span class="text-pink-400 relative inline-block">
                 Nikhil
                 <span class="absolute -bottom-2 left-0 w-full h-1 bg-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </span></h1>
             <p class="text-xl md:text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">A passionate <span class="typed-text"></span></p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6" data-aos="fade-up" data-aos-delay="400">
-                <a href="#projects" class="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50 animate-pulse-glow">
+                <a href="#projects" class="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50 animate-pulse-glow active:scale-95">
                     View My Work <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="#contact" class="px-8 py-3 glass-effect text-pink-400 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30">
+                <a href="#contact" class="px-8 py-3 glass-effect text-pink-400 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30 active:scale-95">
                     Get In Touch <i class="fas fa-paper-plane ml-2"></i>
                 </a>
             </div>
@@ -112,8 +177,8 @@
             <span class="absolute rounded-full bg-white bg-opacity-10 animate-float" data-speed="8" style="width: 120px; height: 120px; top: 80%; left: 20%;"></span>
             <span class="absolute rounded-full bg-white bg-opacity-10 animate-float" data-speed="3" style="width: 90px; height: 90px; top: 30%; left: 70%;"></span>
         </div>
-        <div class="absolute bottom-8 left-0 right-0 text-center z-10 animate-bounce">
-            <a href="#about" class="inline-block text-white hover:text-pink-400 transition-colors duration-300">
+        <div class="absolute bottom-8 left-0 right-0 text-center z-10">
+            <a href="#about" class="inline-block text-white hover:text-pink-400 transition-colors duration-300 animate-bounce">
                 <i class="fas fa-chevron-down text-2xl"></i>
             </a>
         </div>
@@ -168,68 +233,126 @@
                 <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full animate-pulse-glow"></div>
             </div>
             <div class="mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">I've worked with a variety of technologies and frameworks to create stunning web experiences. Here are some of the key skills I bring to every project:</p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">I've mastered a diverse range of technologies and frameworks to create exceptional web experiences. Here's a comprehensive overview of my technical expertise:</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fab fa-html5"></i>
+
+            <!-- Frontend Skills -->
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-2xl font-bold mb-8 text-center text-pink-400">Frontend Development</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">React.js</h3>
+                        <p class="text-gray-400 text-sm mb-3">Advanced component architecture, hooks, and state management</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 90%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">90% Proficiency</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">HTML5</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 95%"></div>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Vue.js</h3>
+                        <p class="text-gray-400 text-sm mb-3">Component-based architecture and Vuex state management</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 85%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">85% Proficiency</span>
                     </div>
-                    <span class="text-sm text-gray-400">95% Proficiency</span>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">TypeScript</h3>
+                        <p class="text-gray-400 text-sm mb-3">Type-safe development and advanced type features</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 88%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">88% Proficiency</span>
+                    </div>
                 </div>
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fab fa-css3-alt"></i>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-2xl font-bold mb-8 text-center text-pink-400">Backend Development</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Node.js</h3>
+                        <p class="text-gray-400 text-sm mb-3">RESTful APIs, Express.js, and server-side rendering</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 85%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">85% Proficiency</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">CSS3</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 90%"></div>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">MongoDB</h3>
+                        <p class="text-gray-400 text-sm mb-3">Database design, aggregation, and optimization</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 82%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">82% Proficiency</span>
                     </div>
-                    <span class="text-sm text-gray-400">90% Proficiency</span>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">GraphQL</h3>
+                        <p class="text-gray-400 text-sm mb-3">Schema design, resolvers, and Apollo Server</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 80%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">80% Proficiency</span>
+                    </div>
                 </div>
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fab fa-js"></i>
+            </div>
+
+            <!-- Tools & Others -->
+            <div data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-2xl font-bold mb-8 text-center text-pink-400">Tools & Others</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Docker</h3>
+                        <p class="text-gray-400 text-sm mb-3">Containerization and microservices architecture</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 78%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">78% Proficiency</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">JavaScript</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 85%"></div>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AWS</h3>
+                        <p class="text-gray-400 text-sm mb-3">Cloud services, deployment, and infrastructure</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 75%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">75% Proficiency</span>
                     </div>
-                    <span class="text-sm text-gray-400">85% Proficiency</span>
-                </div>
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="600">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fab fa-react"></i>
+                    <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                        <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Git & CI/CD</h3>
+                        <p class="text-gray-400 text-sm mb-3">Version control and automated deployment pipelines</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
+                            <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 88%"></div>
+                        </div>
+                        <span class="text-sm text-gray-400">88% Proficiency</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">React</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 80%"></div>
-                    </div>
-                    <span class="text-sm text-gray-400">80% Proficiency</span>
-                </div>
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="700">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Node.js</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 75%"></div>
-                    </div>
-                    <span class="text-sm text-gray-400">75% Proficiency</span>
-                </div>
-                <div class="skill-card glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group" data-aos="fade-up" data-aos-delay="800">
-                    <div class="skill-icon text-4xl mb-4 text-pink-400 group-hover:text-white transition-colors duration-300 animate-float">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">MongoDB</h3>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-2 overflow-hidden">
-                        <div class="bg-gradient-to-r from-pink-500 to-purple-600 h-2.5 rounded-full animate-gradient" style="width: 70%"></div>
-                    </div>
-                    <span class="text-sm text-gray-400">70% Proficiency</span>
                 </div>
             </div>
         </div>
@@ -238,33 +361,58 @@
     <section id="projects" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white" data-scroll-speed="0.15">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">My <span class="text-pink-400">Projects</span></h2>
-                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full"></div>
-                <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">Showcasing my best work and creative solutions</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured <span class="text-pink-400">Projects</span></h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full animate-pulse-glow"></div>
+                <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">A showcase of my most impactful work, demonstrating expertise in full-stack development and creative problem-solving</p>
             </div>
             
             <!-- Project Filters -->
             <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
                 <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300 active" data-filter="all">All Projects</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="web">Web Development</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="web">Web Apps</button>
                 <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="mobile">Mobile Apps</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="design">UI/UX Design</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="ai">AI/ML</button>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                <!-- AI-Powered Analytics Dashboard -->
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            AI/ML
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">AI Analytics Dashboard</h3>
+                        <p class="text-gray-300 mb-4">Real-time business analytics platform with predictive modeling and automated insights generation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">TensorFlow</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Platform -->
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="web" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-img h-48 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="E-Commerce Platform" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                            Web Development
+                            Web App
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">E-Commerce Platform</h3>
-                        <p class="text-gray-300 mb-4">A full-featured online store with product catalog, shopping cart, and secure payment integration.</p>
+                        <p class="text-gray-300 mb-4">Full-featured online store with real-time inventory, secure payments, and personalized recommendations.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Next.js</span>
                             <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Node.js</span>
                             <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">MongoDB</span>
                         </div>
@@ -274,43 +422,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="design" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-img h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Portfolio Website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                            UI/UX Design
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Portfolio Website</h3>
-                        <p class="text-gray-300 mb-4">A responsive portfolio website with smooth animations and modern design elements.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">HTML5</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">JavaScript</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
-                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- Fitness Tracking App -->
                 <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-img h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Task Management App" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Fitness Tracking App" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             Mobile App
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Task Management App</h3>
-                        <p class="text-gray-300 mb-4">A feature-rich task manager with drag-and-drop functionality, categories, and progress tracking.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Fitness Tracking App</h3>
+                        <p class="text-gray-300 mb-4">Cross-platform fitness app with workout tracking, nutrition planning, and social features.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Redux</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React Native</span>
                             <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Redux</span>
                         </div>
                         <div class="flex space-x-4">
                             <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
@@ -318,21 +446,71 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Real Estate Platform -->
                 <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="web" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-img h-48 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Weather Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Real Estate Platform" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                            Web Development
+                            Web App
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Weather Dashboard</h3>
-                        <p class="text-gray-300 mb-4">An interactive weather application with real-time data, forecasts, and beautiful data visualizations.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Real Estate Platform</h3>
+                        <p class="text-gray-300 mb-4">Modern property listing platform with virtual tours, mortgage calculator, and agent matching.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Content Generator -->
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="ai" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-img h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Content Generator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            AI/ML
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">AI Content Generator</h3>
+                        <p class="text-gray-300 mb-4">Advanced content creation tool using GPT-4 for generating high-quality articles and marketing copy.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Python</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Django</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Chart.js</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+                            <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Dashboard -->
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-img h-48 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Social Media Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Web App
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-pink-400 transition-colors duration-300">Social Media Dashboard</h3>
+                        <p class="text-gray-300 mb-4">Comprehensive social media management platform with analytics and scheduling features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">GraphQL</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">MongoDB</span>
                         </div>
                         <div class="flex space-x-4">
                             <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors duration-300"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
@@ -343,195 +521,392 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="px-8 py-3 glass-effect text-pink-400 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30 inline-flex items-center">
-                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                <a href="#" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center group">
+                    View All Projects <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transform transition-transform"></i>
                 </a>
             </div>
         </div>
     </section>
     
-    <section id="testimonials" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white" data-scroll-speed="0.1" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto">
+    <section id="testimonials" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white relative overflow-hidden" data-scroll-speed="0.1" data-aos="fade-up">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-pink-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto relative">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Client <span class="text-pink-400">Testimonials</span></h2>
-                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full animate-pulse-glow"></div>
+                <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">What my clients say about working with me</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="testimonial-card glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="fade-right" data-aos-delay="200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="w-full h-full object-cover">
+
+            <!-- Testimonial Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16" data-aos="fade-up">
+                <div class="glass-effect rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                    <div class="text-4xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
+                    <p class="text-gray-300">Happy Clients</p>
+                </div>
+                <div class="glass-effect rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                    <div class="text-4xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
+                    <p class="text-gray-300">Client Satisfaction</p>
+                </div>
+                <div class="glass-effect rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                    <div class="text-4xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform duration-300">100+</div>
+                    <p class="text-gray-300">Projects Completed</p>
+                </div>
+                <div class="glass-effect rounded-xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                    <div class="text-4xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform duration-300">4.9/5</div>
+                    <p class="text-gray-300">Average Rating</p>
+                </div>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="relative">
+                <!-- Navigation Arrows -->
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-gray-800/50 hover:bg-pink-500 transition-colors duration-300 flex items-center justify-center text-white transform -translate-x-6 hover:scale-110 hidden md:flex" id="prevTestimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-gray-800/50 hover:bg-pink-500 transition-colors duration-300 flex items-center justify-center text-white transform translate-x-6 hover:scale-110 hidden md:flex" id="nextTestimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Testimonial Cards Container -->
+                <div class="testimonial-carousel overflow-hidden px-4">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonialTrack">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card w-full md:w-1/2 flex-shrink-0 px-2">
+                            <div class="glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group h-full">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4 group-hover:border-white transition-colors duration-300 relative">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors duration-300">John Doe</h3>
+                                        <p class="text-pink-400">CEO, Tech Innovations</p>
+                                        <div class="flex items-center mt-1">
+                                            <span class="text-sm text-gray-400">Project: E-Commerce Platform</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-quote-left text-pink-400/20 text-4xl absolute -top-2 -left-2"></i>
+                                    <p class="text-gray-300 italic relative z-10">"Working with Nikhil was an absolute pleasure. Their attention to detail and problem-solving skills are exceptional. The website they built for us exceeded our expectations and has significantly improved our online presence. The e-commerce platform they developed has increased our sales by 150%."</p>
+                                </div>
+                                <div class="flex mt-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">John Doe</h3>
-                            <p class="text-pink-400">CEO, Tech Innovations</p>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card w-full md:w-1/2 flex-shrink-0 px-2">
+                            <div class="glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group h-full">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4 group-hover:border-white transition-colors duration-300 relative">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Smith" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors duration-300">Sarah Smith</h3>
+                                        <p class="text-pink-400">Project Manager, Digital Solutions</p>
+                                        <div class="flex items-center mt-1">
+                                            <span class="text-sm text-gray-400">Project: AI Analytics Dashboard</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-quote-left text-pink-400/20 text-4xl absolute -top-2 -left-2"></i>
+                                    <p class="text-gray-300 italic relative z-10">"Incredible work ethic and technical skills. Nikhil delivered our project ahead of schedule with all requirements met perfectly. Their communication throughout the project was clear and consistent. The AI-powered analytics dashboard they built has revolutionized our decision-making process."</p>
+                                </div>
+                                <div class="flex mt-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Working with Nikhil was an absolute pleasure. Their attention to detail and problem-solving skills are exceptional. The website they built for us exceeded our expectations and has significantly improved our online presence."</p>
-                    <div class="flex mt-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card w-full md:w-1/2 flex-shrink-0 px-2">
+                            <div class="glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group h-full">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4 group-hover:border-white transition-colors duration-300 relative">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Johnson" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors duration-300">Emily Johnson</h3>
+                                        <p class="text-pink-400">Marketing Director, CreativeMinds</p>
+                                        <div class="flex items-center mt-1">
+                                            <span class="text-sm text-gray-400">Project: Social Media Dashboard</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-quote-left text-pink-400/20 text-4xl absolute -top-2 -left-2"></i>
+                                    <p class="text-gray-300 italic relative z-10">"The social media dashboard Nikhil created for our company has received countless compliments. Their ability to translate our vision into a functional and beautiful design was impressive. The analytics features have helped us increase our social media engagement by 200%. I highly recommend their services."</p>
+                                </div>
+                                <div class="flex mt-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card w-full md:w-1/2 flex-shrink-0 px-2">
+                            <div class="glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group h-full">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4 group-hover:border-white transition-colors duration-300 relative">
+                                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition-colors duration-300">Michael Chen</h3>
+                                        <p class="text-pink-400">Founder, StartupLaunch</p>
+                                        <div class="flex items-center mt-1">
+                                            <span class="text-sm text-gray-400">Project: Real Estate Platform</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-quote-left text-pink-400/20 text-4xl absolute -top-2 -left-2"></i>
+                                    <p class="text-gray-300 italic relative z-10">"As a startup founder, finding a developer who understands both the technical and business aspects is crucial. Nikhil not only built a stellar product but also provided valuable insights that helped improve our offering. The real estate platform they developed has helped us scale our business 3x faster than expected."</p>
+                                </div>
+                                <div class="flex mt-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="fade-left" data-aos-delay="300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Smith" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Sarah Smith</h3>
-                            <p class="text-pink-400">Project Manager, Digital Solutions</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Incredible work ethic and technical skills. Nikhil delivered our project ahead of schedule with all requirements met perfectly. Their communication throughout the project was clear and consistent."</p>
-                    <div class="flex mt-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center mt-8 space-x-2" id="testimonialIndicators">
+                    <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-pink-500 transition-colors duration-300 active"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-pink-500 transition-colors duration-300"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-pink-500 transition-colors duration-300"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-pink-500 transition-colors duration-300"></button>
                 </div>
-                
-                <div class="testimonial-card glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="fade-right" data-aos-delay="400">
-                    <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Johnson" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Emily Johnson</h3>
-                            <p class="text-pink-400">Marketing Director, CreativeMinds</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"The website Nikhil created for our company has received countless compliments. Their ability to translate our vision into a functional and beautiful design was impressive. I highly recommend their services."</p>
-                    <div class="flex mt-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star-half-alt text-yellow-400"></i>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card glass-effect rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="fade-left" data-aos-delay="500">
-                    <div class="flex items-center mb-6">
-                        <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-pink-400 mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Chen" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Michael Chen</h3>
-                            <p class="text-pink-400">Founder, StartupLaunch</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"As a startup founder, finding a developer who understands both the technical and business aspects is crucial. Nikhil not only built a stellar product but also provided valuable insights that helped improve our offering."</p>
-                    <div class="flex mt-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <p class="text-gray-400 mb-8">Trusted by leading companies worldwide</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 opacity-50">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8 hover:opacity-100 transition-opacity duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 hover:opacity-100 transition-opacity duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 hover:opacity-100 transition-opacity duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-8 hover:opacity-100 transition-opacity duration-300">
                 </div>
             </div>
         </div>
+
+        <!-- Update the script section -->
+        <script>
+            // Testimonial Carousel
+            const track = document.getElementById('testimonialTrack');
+            const indicators = document.querySelectorAll('#testimonialIndicators button');
+            const prevButton = document.getElementById('prevTestimonial');
+            const nextButton = document.getElementById('nextTestimonial');
+            let currentIndex = 0;
+
+            function getCardWidth() {
+                const container = track.parentElement;
+                const isMobile = window.innerWidth < 768;
+                return isMobile ? container.offsetWidth : container.offsetWidth / 2;
+            }
+
+            function updateCarousel() {
+                const cardWidth = getCardWidth();
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                    indicator.classList.toggle('bg-pink-500', index === currentIndex);
+                    indicator.classList.toggle('bg-gray-600', index !== currentIndex);
+                });
+            }
+
+            function nextSlide() {
+                const maxIndex = window.innerWidth < 768 ? 3 : 2;
+                currentIndex = (currentIndex + 1) % (maxIndex + 1);
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                const maxIndex = window.innerWidth < 768 ? 3 : 2;
+                currentIndex = (currentIndex - 1 + maxIndex + 1) % (maxIndex + 1);
+                updateCarousel();
+            }
+
+            // Event Listeners
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+
+            // Auto-advance carousel
+            let autoSlideInterval = setInterval(nextSlide, 5000);
+
+            // Pause auto-slide on hover
+            track.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+
+            track.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Update on window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    currentIndex = 0; // Reset to first slide
+                    updateCarousel();
+                }, 250);
+            });
+
+            // Initial setup
+            updateCarousel();
+        </script>
     </section>
     
-    <section id="timeline" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto">
+    <section id="timeline" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white relative overflow-hidden" data-aos="fade-up">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-pink-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto relative">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">My <span class="text-pink-400">Journey</span></h2>
                 <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full animate-pulse-glow"></div>
+                <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">A timeline of my professional growth and achievements</p>
             </div>
             
             <div class="relative">
-                <!-- Timeline line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-pink-400 opacity-30"></div>
+                <!-- Timeline line with gradient -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-pink-500 via-purple-500 to-pink-500 opacity-30"></div>
                 
                 <!-- Timeline items -->
-                <div class="timeline-container">
+                <div class="timeline-container space-y-16">
                     <!-- Item 1 -->
-                    <div class="flex flex-col md:flex-row mb-20" data-aos="fade-right">
+                    <div class="flex flex-col md:flex-row mb-20 group" data-aos="fade-right">
                         <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                                <h3 class="text-2xl font-bold text-pink-400">2023 - Present</h3>
-                                <h4 class="text-xl font-semibold text-white mb-2">Senior Developer</h4>
-                                <p class="text-gray-300">Leading development teams and implementing cutting-edge solutions for enterprise clients. Responsible for architecture design and mentoring junior developers.</p>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Leadership</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Architecture</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Innovation</span>
+                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
+                                <!-- Decorative corner elements -->
+                                <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pink-400/20 rounded-tl-lg"></div>
+                                <div class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-pink-400/20 rounded-br-lg"></div>
+                                
+                                <h3 class="text-2xl font-bold text-pink-400 mb-2">2023 - Present</h3>
+                                <h4 class="text-xl font-semibold text-white mb-3">Senior Developer</h4>
+                                <p class="text-gray-300 mb-4">Leading development teams and implementing cutting-edge solutions for enterprise clients. Responsible for architecture design and mentoring junior developers.</p>
+                                <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Leadership</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Architecture</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Innovation</span>
                                 </div>
                             </div>
                         </div>
                         <div class="hidden md:flex md:w-1/2 relative">
                             <div class="absolute left-0 top-6 transform -translate-x-1/2">
-                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800"></div>
+                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800 group-hover:scale-125 transition-transform duration-300"></div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Item 2 -->
-                    <div class="flex flex-col md:flex-row mb-20" data-aos="fade-left">
+                    <div class="flex flex-col md:flex-row mb-20 group" data-aos="fade-left">
                         <div class="hidden md:flex md:w-1/2 relative">
                             <div class="absolute right-0 top-6 transform translate-x-1/2">
-                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800"></div>
+                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800 group-hover:scale-125 transition-transform duration-300"></div>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-8">
-                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                                <h3 class="text-2xl font-bold text-pink-400">2020 - 2023</h3>
-                                <h4 class="text-xl font-semibold text-white mb-2">Full Stack Developer</h4>
-                                <p class="text-gray-300">Worked on various web applications using modern JavaScript frameworks and backend technologies. Implemented RESTful APIs and database optimization.</p>
+                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
+                                <!-- Decorative corner elements -->
+                                <div class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-pink-400/20 rounded-tr-lg"></div>
+                                <div class="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-pink-400/20 rounded-bl-lg"></div>
+                                
+                                <h3 class="text-2xl font-bold text-pink-400 mb-2">2020 - 2023</h3>
+                                <h4 class="text-xl font-semibold text-white mb-3">Full Stack Developer</h4>
+                                <p class="text-gray-300 mb-4">Worked on various web applications using modern JavaScript frameworks and backend technologies. Implemented RESTful APIs and database optimization.</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">React</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Node.js</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">MongoDB</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">React</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Node.js</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">MongoDB</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Item 3 -->
-                    <div class="flex flex-col md:flex-row mb-20" data-aos="fade-right">
+                    <div class="flex flex-col md:flex-row mb-20 group" data-aos="fade-right">
                         <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                                <h3 class="text-2xl font-bold text-pink-400">2018 - 2020</h3>
-                                <h4 class="text-xl font-semibold text-white mb-2">Junior Developer</h4>
-                                <p class="text-gray-300">Started my professional journey, focusing on frontend development and UI/UX design. Worked closely with experienced developers to build responsive websites.</p>
+                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
+                                <!-- Decorative corner elements -->
+                                <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pink-400/20 rounded-tl-lg"></div>
+                                <div class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-pink-400/20 rounded-br-lg"></div>
+                                
+                                <h3 class="text-2xl font-bold text-pink-400 mb-2">2018 - 2020</h3>
+                                <h4 class="text-xl font-semibold text-white mb-3">Junior Developer</h4>
+                                <p class="text-gray-300 mb-4">Started my professional journey, focusing on frontend development and UI/UX design. Worked closely with experienced developers to build responsive websites.</p>
                                 <div class="flex flex-wrap gap-2 mt-4 justify-end">
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">HTML/CSS</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">JavaScript</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">UI/UX</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">HTML/CSS</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">JavaScript</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">UI/UX</span>
                                 </div>
                             </div>
                         </div>
                         <div class="hidden md:flex md:w-1/2 relative">
                             <div class="absolute left-0 top-6 transform -translate-x-1/2">
-                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800"></div>
+                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800 group-hover:scale-125 transition-transform duration-300"></div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Item 4 -->
-                    <div class="flex flex-col md:flex-row" data-aos="fade-left">
+                    <div class="flex flex-col md:flex-row group" data-aos="fade-left">
                         <div class="hidden md:flex md:w-1/2 relative">
                             <div class="absolute right-0 top-6 transform translate-x-1/2">
-                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800"></div>
+                                <div class="w-6 h-6 rounded-full border-4 border-pink-400 bg-gray-800 group-hover:scale-125 transition-transform duration-300"></div>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-8">
-                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                                <h3 class="text-2xl font-bold text-pink-400">2014 - 2018</h3>
-                                <h4 class="text-xl font-semibold text-white mb-2">Computer Science Degree</h4>
-                                <p class="text-gray-300">Earned a Bachelor's degree in Computer Science with a focus on web technologies and database management. Participated in multiple hackathons and coding competitions.</p>
+                            <div class="glass-effect rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
+                                <!-- Decorative corner elements -->
+                                <div class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-pink-400/20 rounded-tr-lg"></div>
+                                <div class="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-pink-400/20 rounded-bl-lg"></div>
+                                
+                                <h3 class="text-2xl font-bold text-pink-400 mb-2">2014 - 2018</h3>
+                                <h4 class="text-xl font-semibold text-white mb-3">Computer Science Degree</h4>
+                                <p class="text-gray-300 mb-4">Earned a Bachelor's degree in Computer Science with a focus on web technologies and database management. Participated in multiple hackathons and coding competitions.</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Algorithms</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Data Structures</span>
-                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm">Web Dev</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Algorithms</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Data Structures</span>
+                                    <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300">Web Dev</span>
                                 </div>
                             </div>
                         </div>
@@ -541,115 +916,226 @@
         </div>
     </section>
     
-    <section id="blog" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto">
+    <section id="blog" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white relative overflow-hidden" data-aos="fade-up">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-pink-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto relative">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Latest <span class="text-pink-400">Articles</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Latest <span class="text-pink-400 relative inline-block">
+                    Articles
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </span></h2>
                 <div class="w-24 h-1 bg-pink-500 mx-auto rounded-full animate-pulse-glow"></div>
                 <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">Thoughts, tutorials, and insights about web development and design</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Blog Post 1 -->
-                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                             alt="The Future of Web Development" 
-                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                            Technology
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300 active" data-filter="all">All Posts</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="technology">Technology</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="tutorial">Tutorials</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="design">Design</button>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="glass-effect rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="relative h-64 lg:h-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="The Future of Web Development" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-pink-500 text-white text-sm font-bold px-4 py-1 rounded-full">
+                                Featured
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center text-gray-400 text-sm mb-2">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>June 15, 2024</span>
-                            <span class="mx-2">•</span>
-                            <i class="far fa-clock mr-2"></i>
-                            <span>5 min read</span>
+                        <div class="p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="flex items-center text-gray-400 text-sm mb-4">
+                                <div class="flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="w-8 h-8 rounded-full mr-2">
+                                    <span>By Nikhil</span>
+                                </div>
+                                <span class="mx-2">•</span>
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>June 15, 2024</span>
+                                <span class="mx-2">•</span>
+                                <i class="far fa-clock mr-2"></i>
+                                <span>5 min read</span>
+                            </div>
+                            <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors duration-300">The Future of Web Development</h3>
+                            <p class="text-gray-300 mb-6 text-lg">Exploring emerging technologies and trends that will shape the future of web development and how developers can stay ahead of the curve.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-4 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300"># WebDev</span>
+                                <span class="px-4 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300"># Trends</span>
+                                <span class="px-4 py-1 bg-gray-700 text-pink-400 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-colors duration-300"># AI</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300 group-hover:translate-x-2 transform transition-transform">
+                                Read Full Article <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">The Future of Web Development</h3>
-                        <p class="text-gray-300 mb-4">Exploring emerging technologies and trends that will shape the future of web development and how developers can stay ahead of the curve.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># WebDev</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># Trends</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># AI</span>
-                        </div>
-                        <a href="#" class="inline-block text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300">
-                            Read More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
                     </div>
                 </div>
-                
-                <!-- Blog Post 2 -->
-                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="200">
+            </div>
+            
+            <!-- Regular Blog Posts -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="tutorial" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                              alt="Optimizing React Applications" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             Tutorial
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="flex items-center text-gray-400 text-sm mb-2">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>May 28, 2024</span>
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="w-6 h-6 rounded-full mr-2">
+                                <span>By Sarah</span>
+                            </div>
                             <span class="mx-2">•</span>
-                            <i class="far fa-clock mr-2"></i>
-                            <span>8 min read</span>
+                            <i class="far fa-calendar-alt mr-1"></i>
+                            <span>May 28, 2024</span>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">Optimizing React Applications</h3>
-                        <p class="text-gray-300 mb-4">Best practices and techniques for improving performance in React applications, including code splitting, memoization, and proper state management.</p>
+                        <p class="text-gray-300 mb-4 line-clamp-2">Best practices and techniques for improving performance in React applications, including code splitting, memoization, and proper state management.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># React</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># Performance</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># React</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># Performance</span>
                         </div>
-                        <a href="#" class="inline-block text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300">
-                            Read More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400 text-sm"><i class="far fa-clock mr-1"></i> 8 min read</span>
+                            <a href="#" class="text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Blog Post 3 -->
-                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="300">
+                <!-- Blog Post 2 -->
+                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="design" data-aos="fade-up" data-aos-delay="200">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
                              alt="UI/UX Design Principles" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                         <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             Design
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="flex items-center text-gray-400 text-sm mb-2">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>April 10, 2024</span>
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Author" class="w-6 h-6 rounded-full mr-2">
+                                <span>By Michael</span>
+                            </div>
                             <span class="mx-2">•</span>
-                            <i class="far fa-clock mr-2"></i>
-                            <span>6 min read</span>
+                            <i class="far fa-calendar-alt mr-1"></i>
+                            <span>April 10, 2024</span>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">UI/UX Design Principles for Developers</h3>
-                        <p class="text-gray-300 mb-4">Essential design principles every developer should know to create better user experiences and more visually appealing applications.</p>
+                        <p class="text-gray-300 mb-4 line-clamp-2">Essential design principles every developer should know to create better user experiences and more visually appealing applications.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># UI/UX</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># Design</span>
-                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs"># Accessibility</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># UI/UX</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># Design</span>
                         </div>
-                        <a href="#" class="inline-block text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300">
-                            Read More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400 text-sm"><i class="far fa-clock mr-1"></i> 6 min read</span>
+                            <a href="#" class="text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card glass-effect rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" data-category="technology" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="AI in Web Development" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Technology
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-400 text-sm mb-3">
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Author" class="w-6 h-6 rounded-full mr-2">
+                                <span>By Emily</span>
+                            </div>
+                            <span class="mx-2">•</span>
+                            <i class="far fa-calendar-alt mr-1"></i>
+                            <span>March 25, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">AI in Web Development</h3>
+                        <p class="text-gray-300 mb-4 line-clamp-2">How artificial intelligence is revolutionizing web development and what it means for the future of coding and design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># AI</span>
+                            <span class="px-3 py-1 bg-gray-700 text-pink-400 rounded-full text-xs hover:bg-pink-500 hover:text-white transition-colors duration-300"># Future</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400 text-sm"><i class="far fa-clock mr-1"></i> 7 min read</span>
+                            <a href="#" class="text-pink-400 font-medium hover:text-pink-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform">
+                                Read More <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                    View All Articles <i class="fas fa-arrow-right ml-2"></i>
+                <a href="#" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center group">
+                    View All Articles <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transform transition-transform"></i>
                 </a>
             </div>
         </div>
+
+        <!-- Add this script at the end of the section -->
+        <script>
+            // Blog filtering functionality
+            const blogFilterButtons = document.querySelectorAll('#blog .filter-btn');
+            const blogCards = document.querySelectorAll('#blog .blog-card');
+            
+            blogFilterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    blogFilterButtons.forEach(btn => btn.classList.remove('active', 'bg-pink-500'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active', 'bg-pink-500');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || filterValue === cardCategory) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        </script>
     </section>
     
     <section id="contact" class="py-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white" data-scroll-speed="0.08">
@@ -788,9 +1274,9 @@
         </div>
         
         <div class="fixed bottom-8 right-8 z-50">
-            <a href="#" class="w-12 h-12 flex items-center justify-center bg-pink-500 hover:bg-pink-600 rounded-full transition-colors duration-300 text-white shadow-lg animate-pulse-glow">
+            <button id="scrollToTop" class="w-12 h-12 flex items-center justify-center bg-pink-500 hover:bg-pink-600 rounded-full transition-all duration-300 text-white shadow-lg animate-pulse-glow opacity-0 invisible transform translate-y-10" aria-label="Scroll to top">
                 <i class="fas fa-chevron-up"></i>
-            </a>
+            </button>
         </div>
     </footer>
     
@@ -812,136 +1298,160 @@
             loop: true
         });
 
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('nav ul');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('hidden');
-            menuToggle.classList.toggle('active');
-        });
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById('scrollToTop');
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Parallax effect for hero particles
-        const particles = document.querySelectorAll('.hero-particles span');
-        window.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            particles.forEach(particle => {
-                const speed = particle.getAttribute('data-speed');
-                const x = (mouseX * speed * 100);
-                const y = (mouseY * speed * 100);
-                particle.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        });
-
-        // Add scroll-based animations
+        // Show/hide button based on scroll position
         window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const sections = document.querySelectorAll('section');
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+                scrollToTopButton.classList.add('opacity-100', 'visible', 'translate-y-0');
+            } else {
+                scrollToTopButton.classList.add('opacity-0', 'invisible', 'translate-y-10');
+                scrollToTopButton.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Rest of your existing JavaScript code...
+    </script>
+    <script>
+        // Add this to your existing JavaScript
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        let isMenuOpen = false;
+
+        // Toggle menu function with enhanced animations
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
             
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
+            // Toggle menu visibility with smooth animation
+            mobileMenu.classList.toggle('translate-x-full');
+            
+            // Animate hamburger to X with smooth transition
+            const bars = menuToggle.querySelectorAll('div');
+            if (isMenuOpen) {
+                bars[0].classList.add('rotate-45', 'translate-y-2');
+                bars[1].classList.add('opacity-0');
+                bars[2].classList.add('-rotate-45', '-translate-y-2');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
                 
-                if (scrollPosition >= sectionTop - window.innerHeight / 2) {
-                    section.classList.add('active');
+                // Add fade-in animation to menu items
+                mobileMenuLinks.forEach((link, index) => {
+                    link.style.opacity = '0';
+                    link.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        link.style.transition = 'all 0.3s ease';
+                        link.style.opacity = '1';
+                        link.style.transform = 'translateY(0)';
+                    }, 100 * index);
+                });
+            } else {
+                bars[0].classList.remove('rotate-45', 'translate-y-2');
+                bars[1].classList.remove('opacity-0');
+                bars[2].classList.remove('-rotate-45', '-translate-y-2');
+                document.body.style.overflow = ''; // Restore scrolling
+                
+                // Reset menu items animation
+                mobileMenuLinks.forEach(link => {
+                    link.style.opacity = '0';
+                    link.style.transform = 'translateY(20px)';
+                });
+            }
+        }
+
+        // Event listeners with enhanced touch support
+        menuToggle.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link with smooth transition
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (isMenuOpen) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    toggleMenu();
+                    
+                    // Smooth scroll to section after menu closes
+                    setTimeout(() => {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, 500);
                 }
             });
         });
 
-        // Project filtering functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-pink-500'));
-                
-                // Add active class to clicked button
-                button.classList.add('active', 'bg-pink-500');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    const cardCategory = card.getAttribute('data-category');
-                    
-                    if (filterValue === 'all' || filterValue === cardCategory) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 100);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
+        // Close menu when clicking outside with fade effect
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                toggleMenu();
+            }
         });
 
-        // Form submission handling
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+        // Close menu on window resize with smooth transition
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.innerWidth >= 768 && isMenuOpen) {
+                    toggleMenu();
+                }
+            }, 250);
+        });
+
+        // Add touch swipe support for mobile menu
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        mobileMenu.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        mobileMenu.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 100;
+            if (touchEndX - touchStartX > swipeThreshold && isMenuOpen) {
+                toggleMenu();
+            }
+        }
+
+        // Add active state to current section in mobile menu
+        function updateActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
                 
-                // Get form data
-                const formData = new FormData(contactForm);
-                const formValues = Object.fromEntries(formData.entries());
-                
-                // Here you would typically send the form data to a server
-                console.log('Form submitted with values:', formValues);
-                
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in';
-                successMessage.textContent = 'Message sent successfully!';
-                document.body.appendChild(successMessage);
-                
-                // Remove success message after 3 seconds
-                setTimeout(() => {
-                    successMessage.remove();
-                }, 3000);
-                
-                // Reset form
-                contactForm.reset();
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    mobileMenuLinks.forEach(link => {
+                        link.classList.remove('text-pink-400');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('text-pink-400');
+                        }
+                    });
+                }
             });
         }
 
-        // Add smooth reveal animation for sections
-        const revealSection = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
-                }
-            });
-        };
-
-        const sectionObserver = new IntersectionObserver(revealSection, {
-            root: null,
-            threshold: 0.15,
-        });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('section-hidden');
-            sectionObserver.observe(section);
-        });
+        window.addEventListener('scroll', updateActiveSection);
+        window.addEventListener('load', updateActiveSection);
     </script>
 </body>
 </html>
